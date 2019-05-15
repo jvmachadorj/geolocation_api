@@ -11,10 +11,6 @@ class ProvidersSerializer(serializers.ModelSerializer):
 
 
 class SearchProvidersSerializer(serializers.ModelSerializer):
-    provider_name = serializers.SerializerMethodField()
-
-    def get_provider_name(self, obj: Providers):
-        return obj.name
 
     class Meta:
         model = Providers

@@ -8,7 +8,7 @@ router.register(r'providers', ProvidersViewSet, basename='providers')
 router.register(r'service_areas', ServiceAreasViewSet, basename='service_areas')
 
 urlpatterns = [
-    path('search', SearchView.as_view())
+    path('search', SearchView.as_view(), name='coordinate_search')
 ]
 
 urlpatterns += router.urls
